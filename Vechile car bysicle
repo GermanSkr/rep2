@@ -1,0 +1,33 @@
+class Vehicle:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def drive(self):
+        print(f"The {self.color} {self.brand} is driving.")
+
+class Car(Vehicle):
+    def __init__(self, brand, color, fuel_type):
+        super().__init__(brand, color)
+        self.fuel_type = fuel_type
+
+    def refuel(self):
+        print(f"Refueling the {self.color} {self.brand} with {self.fuel_type} fuel.")
+
+class Bicycle(Vehicle):
+    def __init__(self, brand, color, type):
+        super().__init__(brand, color)
+        self.type = type
+
+    def pedal(self):
+        print(f"The {self.color} {self.brand} bicycle is pedaling.")
+
+
+car = Car("Toyota", "red", "gasoline")
+bicycle = Bicycle("Giant", "blue", "mountain")
+
+car.drive()  
+car.refuel()  
+
+bicycle.drive()  
+bicycle.pedal() 
