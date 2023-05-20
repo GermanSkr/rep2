@@ -1,0 +1,21 @@
+import random
+
+class Cat:
+    def __init__(self, name):
+        self.name = name
+        self.mood = "happy"
+
+    def walk(self):
+        print(f"{self.name} виходить на прогулянку.")
+        self.mood = "grumpy" if random.random() < 0.5 else "happy"
+
+    def eat(self):
+        print(f"{self.name} поїдає свою їжу.")
+        self.mood = "happy"
+
+    def sleep(self):
+        print(f"{self.name} засинає.")
+        self.mood = "grumpy" if random.random() < 0.3 else "happy"
+
+    def purr(self):
+        print(f"{self.name} муркає.")
