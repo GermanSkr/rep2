@@ -1,0 +1,18 @@
+import logging
+
+# Налаштування логування
+logging.basicConfig(filename='simulation.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+
+# Функція симуляції
+def simulate():
+    # Логування початку симуляції
+    logging.info('Початок симуляції')
+
+    # мій код симуляції тут
+    # ...
+
+    # Логування результатів симуляції
+    logging.info('Результати симуляції')
+
+# Виклик функції симуляції
+simulate()
