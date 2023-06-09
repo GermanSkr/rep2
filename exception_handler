@@ -1,0 +1,13 @@
+def exception_handler(func):
+    def wrapper(*args, **kwargs):
+        try:
+            result = func(*args, **kwargs)
+            return result
+        except Exception as e:
+            print(f"Помилка: {e}")
+    return wrapper
+
+@exception_handler
+def calculate(expression):
+    return eval(expression)
+calculate("10 / 0")  # Виведе: "Помилка: division by zero"
