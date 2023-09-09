@@ -1,0 +1,6 @@
+class CurrencyConverter:
+    def __init__(self, usd_rate):
+        self.usd_rate = usd_rate
+
+    def convert_to_usd(self, amount):
+        return amount / self.usd_rate
